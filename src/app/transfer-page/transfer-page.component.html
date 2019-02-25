@@ -1,0 +1,25 @@
+<div class="container">
+<h3>Transaction Details</h3>
+  <div class="panel-group">
+    <div class="panel panel-default">
+      <div class="panel-body">
+        <a href="#"
+           class="list-group-item clearfix"
+           *ngFor="let transaction of transaction">
+          <div class="pull-left">
+            <h4>{{transaction.transactionName}}</h4>
+            <h4>{{transaction.transactionDate}}</h4>
+            <h5>{{transaction.transactionDescription}}</h5>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <h4>Transfer Amount</h4>
+  <a routerLink="/recipient-page" class="btn btn-info" role="button">Select Recipient</a>
+  <br/>
+  <br/>
+
+</div>
+

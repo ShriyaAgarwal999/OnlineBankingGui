@@ -1,0 +1,47 @@
+<h3>Select Recipient</h3>
+<div class="container">
+  <br>
+  <h1>Add recipient</h1>
+  <p>Please fill in this form to add a recipient</p>
+  <hr>
+
+  <label for="rname"><b>Recipient name</b></label>
+  <input type="text" placeholder="Enter Recipient name" name="rname" required>
+  <br/>
+  <br/>
+  <label for="email"><b>Email</b></label>
+  <input type="text" placeholder="Enter Recipient Email" name="email" required>
+  <br/>
+  <br/>
+  <label for="phone"><b>Contact No.</b></label>
+  <input type="text" pattern="[6789][0-9]{9}" placeholder="Enter Recipient Contact Number" name="phone" required>
+  <br/>
+  <br/>
+  <label for="accountNo"><b>Account No.</b></label>
+  <input type="text" pattern="[6789][0-9]{9}" placeholder="Enter Recipient Account Number" name="accountNo" required>
+  <br/>
+  <br/>
+  <button type="submit" class="addBtn">Register</button>
+<br/>
+  <br/>
+
+  <h3>List of recipients</h3>
+  <div class="panel-group">
+    <div class="panel panel-default">
+      <div class="panel-body">
+        <a href="#"
+           class="list-group-item clearfix"
+           *ngFor="let transaction of transaction">
+          <div class="pull-left">
+            <h4>{{recipient.recipientName}}</h4>
+            <h4>{{recipient.recipientEmail}}</h4>
+            <h5>{{recipient.recipientAccountNo}}</h5>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <button type="submit" routerLink="/transfer-details" class="nextBtn">Next</button>
+
+</div>
